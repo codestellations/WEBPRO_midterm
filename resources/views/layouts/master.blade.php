@@ -15,11 +15,14 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item @yield('Home')">
+                        <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @yield('Category')">
                         <a class="nav-link" href="/category">Category</a>
+                    </li>
+                    <li class="nav-item @yield('Promo')">
+                        <a class="nav-link" href="/promo">Promo</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

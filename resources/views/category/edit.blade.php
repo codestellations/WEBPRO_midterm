@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('Category', 'active')
+
 @section('content')
     <h1>Update Data Category</h1>
     <!-- flash message -->

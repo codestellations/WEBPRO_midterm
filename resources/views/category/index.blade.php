@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('Category', 'active')
+
 @section('content')
     <!-- flash message -->
     @if(session('success'))
