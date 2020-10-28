@@ -16,7 +16,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item @yield('Home')">
-                        <a class="nav-link" href="/">Home</a>
+                        {{-- <a class="nav-link" href="/">Home</a> --}}
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
                     </li>
                     <li class="nav-item @yield('Category')">
                         <a class="nav-link" href="/category">Category</a>
@@ -26,6 +27,8 @@
                     </li>
                     <li class="nav-item @yield('Order')">
                         <a class="nav-link" href="/order">Order</a>
+                    <li class="nav-item @yield('Log Out')">
+                        <a class="nav-link" href="/logout">Log Out</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

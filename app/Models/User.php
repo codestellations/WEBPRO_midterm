@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function getUserID(){
+        return sprintf('E%05d', $this->id);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
