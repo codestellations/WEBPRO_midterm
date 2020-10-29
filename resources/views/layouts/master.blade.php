@@ -22,11 +22,15 @@
                     <li class="nav-item @yield('Category')">
                         <a class="nav-link" href="/category">Category</a>
                     </li>
+                    <li class="nav-item @yield('Book')">
+                        <a class="nav-link" href="/book">Book</a>
+                    </li>
                     <li class="nav-item @yield('Promo')">
                         <a class="nav-link" href="/promo">Promo</a>
                     </li>
                     <li class="nav-item @yield('Order')">
                         <a class="nav-link" href="/order">Order</a>
+                    </li>
                     <li class="nav-item @yield('Log Out')">
                         <a class="nav-link" href="/logout">Log Out</a>
                     </li>

@@ -52,5 +52,12 @@ Route::group(['middleware' => ['web', 'auth']], function(){
     Route::get('/order', 'App\Http\Controllers\OrderController@index'); // read order
     Route::get('/order/{id_order}/edit', 'App\Http\Controllers\OrderController@edit'); // edit order
     Route::post('/order/{id_order}/update', 'App\Http\Controllers\OrderController@update'); // update order
+
+    /* BOOK */
+    Route::get('/book', 'App\Http\Controllers\BookController@index');                       // read book
+    Route::post('/book/create', 'App\Http\Controllers\BookController@create');              // create new book
+    Route::get('/book/{id_book}/edit', 'App\Http\Controllers\BookController@edit');         // edit book
+    Route::post('/book/{id_book}/update', 'App\Http\Controllers\BookController@update');    // update book
+    Route::get('/book/{id_book}/delete', 'App\Http\Controllers\BookController@delete');     // delete book
 });
 

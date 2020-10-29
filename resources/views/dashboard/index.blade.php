@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-{{-- @section('Promo', 'active') --}}
+@section('Home', 'active')
 
 @section('content')
     
