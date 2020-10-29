@@ -28,6 +28,7 @@
 
         <!-- Category data table -->
         <table class="table table-hover">
+            <thead class="thead-dark">
             <tr>
                 <th>ID Category</th>
                 <th>Category Name</th>
@@ -43,6 +44,7 @@
                 </td>
             </tr>
             @endforeach
+            </thead>
         </table>
     </div>
 

@@ -16,11 +16,16 @@ class Order extends Model
 
     public function book()
     {
-        return $this->hasMany('App\Models\Book', 'order_details', 'fk_id_order', 'fk_id_book');
+        return $this->belongsToMany('App\Models\Book', 'order_details', 'fk_id_order', 'fk_id_book');
     }
 
     public function payment()
     {
         return $this->hasOne('App\Models\Payment', 'fk_id_order');
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Models\Customer', 'fk_id_customer');
     }
 }

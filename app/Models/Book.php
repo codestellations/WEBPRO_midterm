@@ -27,6 +27,6 @@ class Book extends Model
 
     public function order()
     {
-        return $this->hasMany('App\Models\Order', 'order_details', 'fk_id_book', 'fk_id_order');
+        return $this->belongsToMany('App\Models\Order', 'order_details', 'fk_id_book', 'fk_id_order');
     }
 }
