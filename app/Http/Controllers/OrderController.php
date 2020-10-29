@@ -14,13 +14,13 @@ class OrderController extends Controller
 
     // function to edit order
     public function edit($id_order){
-        $order = \App\Models\Order::find($id_order); // find the id and save it to variable category
+        $order = \App\Models\Order::find($id_order); // find the id and save it to variable order
         return view('order/edit', ['order' => $order]);
     }
 
     // function to update order
     public function update(Request $request, $id_order){
-        $order = \App\Models\Order::find($id_order); // find the id and save it to variable category
+        $order = \App\Models\Order::find($id_order); // find the id and save it to variable order
         $order->update($request->all()); // update data to database
         return redirect('/order')->with('success', 'Update data success');
     }

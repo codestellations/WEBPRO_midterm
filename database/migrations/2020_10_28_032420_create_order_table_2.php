@@ -15,11 +15,9 @@ class CreateOrderTable2 extends Migration
     {
         // foreign key
         Schema::table('order', function (Blueprint $table) {
-            $table->char('fk_id_employee', 6)->nullable();
             $table->char('fk_id_payment', 6)->nullable();
             $table->char('fk_id_customer', 6);
 
-            $table->foreign('fk_id_employee')->references('id_employee')->on('employee')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('fk_id_payment')->references('id_payment')->on('payment')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('fk_id_customer')->references('id_customer')->on('customer')->onUpdate('cascade')->onDelete('cascade');
         });

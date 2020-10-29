@@ -27,7 +27,6 @@
                 <th>ID Payment</th>
                 <th>Status</th>
                 <th>Update Date</th>
-                <th>ID Employee</th>
                 <th>Action</th>
             </tr>
             @foreach($data_order as $order)
@@ -38,7 +37,6 @@
                 <td>{{$order->fk_id_payment}}</td>
                 <td>{{$order->status}}</td>
                 <td>{{$order->updated_at}}</td>
-                <td>{{$order->fk_id_employee}}</td>
                 <td>
                     <a href="/order/{{$order->id_order}}/edit" class="btn btn-info btn-sm">Details</button>
                 </td>

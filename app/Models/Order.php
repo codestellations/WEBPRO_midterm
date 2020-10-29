@@ -9,6 +9,7 @@ class Order extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_order';
+    public $incrementing = false;
     
     protected $table = 'order'; // order table
     protected $fillable = ['id_order', 'status']; // array of field
