@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('Order', 'active')
+
 @section('content')
     <h1>Order Details</h1>
     <!-- flash message -->

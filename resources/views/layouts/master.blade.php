@@ -31,6 +31,9 @@
                     <li class="nav-item @yield('Order')">
                         <a class="nav-link" href="/order">Order</a>
                     </li>
+                    <li class="nav-item @yield('Income')">
+                        <a class="nav-link" href="/income">Income</a>
+                    </li>
                     <li class="nav-item @yield('Log Out')">
                         <a class="nav-link" href="/logout">Log Out</a>
                     </li>

@@ -14,4 +14,19 @@ class Book extends Model
 
     protected $table = 'book';
     protected $fillable = ['id_book', 'name_book', 'author', 'price_book', 'pages', 'date_published', 'publisher', 'stock', 'fk_id_category', 'fk_id_promo'];
+
+    public function promo()
+    {
+        return $this->belongsTo('App\Models\Promo', 'fk_id_promo');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'fk_id_category');
+    }
+
+    public function order()
+    {
+        return $this->hasMany('App\Models\Order', 'order_details', 'fk_id_book', 'fk_id_order');
+    }
 }
