@@ -17,6 +17,12 @@
         <div class="col-6">
             <h1>Order Data</h1>
         </div>
+        <div class="col-6">
+            <form class="form-inline my-2 my-lg-0 float-right" method="GET" action="/order">
+                <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search by ID or status" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>  
+        </div>
 
         <!-- Order data table -->
         <table class="table table-hover">
