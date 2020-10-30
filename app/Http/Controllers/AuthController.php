@@ -15,8 +15,8 @@ class AuthController extends Controller
         // dd($request->all());
 
         if(Auth::attempt($request->only('email', 'password'))){
-            return redirect ('/dashboard');
-            // return redirect()->intended('/dashboard');
+            $user = Auth::user()->id;
+            return redirect ('dashboard')->withUser($user);
         }
 
         else return redirect('/login');
@@ -30,7 +30,7 @@ class AuthController extends Controller
         // dd($request->all());
         
         $user = new \App\Models\User;
-        $user->getUserID();
+        $user->id = $request->id;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
@@ -42,7 +42,6 @@ class AuthController extends Controller
 
         $user->save();
         return redirect ('/dashboard');
-        
     }
 
     public function logout(){

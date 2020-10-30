@@ -1,6 +1,4 @@
-{{-- @extends('layouts.master') --}}
-
-@section('Regsiter', 'active')
+@section('Register', 'active')
 
 @section('content')
 
@@ -39,28 +37,28 @@
         
         <div class="form-group">
             <label for="inputName">Name</label>
-            <input type="text" class="form-control" name="name" id="inputName" placeholder="Steve Rogers">
+            <input type="text" class="form-control" name="name" id="inputName" placeholder="Your Name" required>
         </div>
         
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="steve@gmail.com">
+                <label for="inputEmail4">E-mail</label>
+                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="example@email.com" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" name="password" id="inputPassword4">
+                <input type="password" class="form-control" name="password" id="inputPassword" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputPhoneNum">Phone Number</label>
-                <input type="tel" class="form-control" name="phone_num" id="inputPhoneNum" placeholder="088810888108">
+                <input type="tel" class="form-control" name="phone_num" id="inputPhoneNum" placeholder="Your phone number" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputGender">Gender</label>
-                <select id="inputGender" class="form-control" name="gender">
+                <select id="inputGender" class="form-control" name="gender" required>
                     <option selected>Choose...</option>
                     <option>Female</option>
                     <option>Male</option>
@@ -70,7 +68,7 @@
 
         <div class="form-group">
             <label for="inputRole">Role</label>
-                <select id="inputRole" class="form-control" name="role">
+                <select id="inputRole" class="form-control" name="role" required>
                     <option selected>Choose...</option>
                     <option>Manager</option>
                     <option>Human Resource</option>

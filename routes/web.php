@@ -30,7 +30,9 @@ Route::get('/logout', 'App\Http\Controllers\AuthController@logout');
 
 Route::group(['middleware' => ['web', 'auth']], function(){
     // DASHBOARD
-    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index');
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/dashboard/{id}/edit', 'App\Http\Controllers\DashboardController@edit');
+    Route::post('/dashboard/{id}/update', 'App\Http\Controllers\DashboardController@update');
 
     /* CATEGORY */ 
     Route::get('/category', 'App\Http\Controllers\CategoryController@index'); // read category
@@ -39,14 +41,12 @@ Route::group(['middleware' => ['web', 'auth']], function(){
     Route::post('/category/{id_category}/update', 'App\Http\Controllers\CategoryController@update'); // update category
     Route::get('/category/{id_category}/delete', 'App\Http\Controllers\CategoryController@delete'); // delete category
 
-
     /* PROMO */
     Route::get('/promo', 'App\Http\Controllers\PromoController@index');                     // read promo
     Route::post('/promo/create', 'App\Http\Controllers\PromoController@create');            // create new promo
     Route::get('/promo/{id_promo}/edit', 'App\Http\Controllers\PromoController@edit');      // edit promo
     Route::post('/promo/{id_promo}/update', 'App\Http\Controllers\PromoController@update'); // update promo
     Route::get('/promo/{id_promo}/delete', 'App\Http\Controllers\PromoController@delete');  // delete promo
-
 
     /* ORDER */
     Route::get('/order', 'App\Http\Controllers\OrderController@index'); // read order

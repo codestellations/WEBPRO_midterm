@@ -1,5 +1,3 @@
-{{-- @extends('layouts.master') --}}
-
 @section('Login', 'active')
 
 @section('content')
@@ -38,16 +36,16 @@
         <h1 class="h3 mb-3 font-weight-normal">Da Venti Admin Login</h1>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">E-mail</span>
+                <span class="input-group-text" id="basic-addon1" required>E-mail</span>
             </div>
-            <input type="email" class="form-control" name="email" placeholder="steve@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="email" class="form-control" name="email" placeholder="example@email.com" required>
         </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Password</span>
             </div>
-            <input type="password" class="form-control" name="password" placeholder="Password" required="" aria-label="Password" aria-describedby="basic-addon1">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
         </div>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
