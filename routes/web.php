@@ -59,5 +59,8 @@ Route::group(['middleware' => ['web', 'auth']], function(){
     Route::get('/book/{id_book}/edit', 'App\Http\Controllers\BookController@edit');         // edit book
     Route::post('/book/{id_book}/update', 'App\Http\Controllers\BookController@update');    // update book
     Route::get('/book/{id_book}/delete', 'App\Http\Controllers\BookController@delete');     // delete book
+
+    /* INCOME */
+    Route::get('/income', 'App\Http\Controllers\IncomeController@index');
 });
 

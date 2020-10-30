@@ -28,6 +28,7 @@
 
         <!-- Category data table -->
         <table class="table table-hover">
+            <thead class="thead-dark">
             <tr>
                 <th>ID Category</th>
                 <th>Category Name</th>
@@ -43,6 +44,7 @@
                 </td>
             </tr>
             @endforeach
+            </thead>
         </table>
     </div>
 
@@ -62,7 +64,7 @@
                     {{csrf_field()}}
                         <div class="form-group">
                             <label for="inputCategoryID">Category ID</label>
-                            <input name="id_category" type="number" class="form-control" id="inputCategoryID1" min="100000" max="999999" required>
+                            <input name="id_category" type="char" class="form-control" id="inputCategoryID1" placeholder="Category ID eg. C00001" required>
                         </div> 
                         <div class="form-group">
                             <label for="inputCategoryName">Category Name</label>

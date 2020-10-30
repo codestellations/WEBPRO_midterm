@@ -17,7 +17,7 @@
     
     <div class="row">
         <div class="col-6">
-            <h1>Promo List</h1>
+            <h1>Promo Data</h1>
         </div>
         <div class="col-6">
             <!-- Button trigger modal -->

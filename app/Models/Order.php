@@ -9,7 +9,23 @@ class Order extends Model
 {
     use HasFactory;
     protected $primaryKey = 'id_order';
+    public $incrementing = false;
     
     protected $table = 'order'; // order table
     protected $fillable = ['id_order', 'status']; // array of field
+
+    public function book()
+    {
+        return $this->belongsToMany('App\Models\Book', 'order_details', 'fk_id_order', 'fk_id_book');
+    }
+
+    public function payment()
+    {
+        return $this->hasOne('App\Models\Payment', 'fk_id_order');
+    }
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Models\Customer', 'fk_id_customer');
+    }
 }

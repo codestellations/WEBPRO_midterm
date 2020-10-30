@@ -14,4 +14,9 @@ class Promo extends Model
 
     protected $table = 'promo';
     protected $fillable = ['id_promo', 'name_promo', 'discount', 'start_discount', 'end_discount'];
+
+    public function books()
+    {
+        return $this->hasMany('App\Models\Book', 'fk_id_promo');
+    }
 }

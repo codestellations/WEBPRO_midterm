@@ -17,7 +17,7 @@
     
     <div class="row">
         <div class="col-6">
-            <h1>Book List</h1>
+            <h1>Book Data</h1>
         </div>
         <div class="col-6">
             <!-- Button trigger modal -->
@@ -27,12 +27,12 @@
         </div>
     </div>
 
-        <!-- Category data table -->
+        <!-- Book data table -->
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
                     <th>ID Book</th>
-                    <th>ID Category</th>
+                    <th>Category</th>
                     {{-- <th>ID Promo</th> --}}
                     <th>Book Title</th>
                     <th>Author</th>
@@ -48,7 +48,7 @@
                 @foreach($data_book as $book)
                     <tr>
                         <td>{{$book->id_book}}</td>
-                        <td>{{$book->fk_id_category}}</td>
+                        <td>{{$book->category->name_category}}</td>
                         {{--<td>{{$book->fk_id_promo}}</td> --}}
                         <td>{{$book->name_book}}</td>
                         <td>{{$book->author}}</td>

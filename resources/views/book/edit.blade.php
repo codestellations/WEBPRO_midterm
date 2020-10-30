@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label for="SelectCategory">Category</label>
                     <select class="form-control" id="SelectCategory" name="fk_id_category">
-                        <option value="{{$book->fk_id_category}}">-- Select One --</option>
+                        <option value="{{$book->fk_id_category}}">{{$book->category->name_category}}</option>
                         @foreach($data_category as $category)
                             <option value="{{$category->id_category}}">{{$category->name_category}}</option>
                         @endforeach
@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <label for="SelectPromo">Promo</label>
                     <select class="form-control" id="fk_id_promo">
-                        <option value="{{$book->fk_id_promo}}">-- Select One --</option>
+                        <option value="{{$book->fk_id_promo}}">@if($book->fk_id_promo != null){{$book->promo->name_promo}}@else-- Select One --@endif</option>
                         @foreach($data_promo as $promo)
                             <option value="{{$promo->id_promo}}">{{$promo->name_promo}}</option>
                         @endforeach
