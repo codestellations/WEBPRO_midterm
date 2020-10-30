@@ -9,7 +9,7 @@
         .vertical-center {
         min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
         min-height: 100vh; /* These two lines are counted as one :-)       */
-
+        width: 100%;
         display: flex;
         align-items: center;
         }
@@ -26,8 +26,8 @@
         </div>
     @endif
 
-    <div class="row text-center vertical-center col-lg-4">
-        <div class="col-lg-4">
+    <div class="row text-center vertical-center">
+        <div class="col">
             <h1 class="mb-2 display-4">Welcome, {{auth()->user()->name}}!</h1>
             <blockquote class="blockquote">
             <p class="mb-2">Thought is the wind, knowledge the sail, and mankind the vessel.</p>
